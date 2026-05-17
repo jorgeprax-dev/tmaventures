@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta property="og:title" content="TMA Ventures">
-<meta property="og:description" content="El primer fondo de capital de riesgo con foco exclusivo en el corredor industrial Tampico-Madero-Altamira">
-<meta property="og:image" content="/tma_ventures_og.png">
-<meta property="og:url" content="https://tmaventures.vc">
-<meta property="og:type" content="website">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="TMA Ventures">
+<meta property="og:description" content="El primer fondo de capital de riesgo con foco exclusivo en el corredor industrial Tampico-Madero-Altamira">
+<meta property="og:url" content="https://tmaventures.vc">
+<meta property="og:type" content="website">
 <title>TMA Ventures</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Helvetica+Neue:wght@300;400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
 
-/* ── RESET & BASE ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
 :root {
-  --ink:       #0C0C0C;
-  --ink-2:     #161616;
-  --ink-3:     #222222;
-  --rule:      rgba(255,255,255,0.08);
-  --rule-l:    rgba(255,255,255,0.14);
-  --dim:       #666666;
-  --mid:       #999999;
-  --light:     #CCCCCC;
-  --paper:     #F2EFE9;
-  --white:     #FFFFFF;
-  --gold:      #A8832A;
-  --gold-l:    #C9A84C;
+  --ink:    #0C0C0C;
+  --ink-2:  #161616;
+  --ink-3:  #222222;
+  --rule:   rgba(255,255,255,0.08);
+  --rule-l: rgba(255,255,255,0.14);
+  --dim:    #666666;
+  --mid:    #999999;
+  --light:  #CCCCCC;
+  --white:  #FFFFFF;
+  --gold:   #A8832A;
+  --gold-l: #C9A84C;
 }
 
 body {
@@ -47,783 +44,328 @@ body {
 ::-webkit-scrollbar-track { background: var(--ink); }
 ::-webkit-scrollbar-thumb { background: var(--ink-3); }
 
-/* ── UTILITIES ── */
-.serif {
-  font-family: 'EB Garamond', Georgia, serif;
-}
-.mono {
-  font-family: 'DM Mono', 'Courier New', monospace;
-  font-weight: 300;
-}
-.label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--dim);
-}
-.gold { color: var(--gold-l); }
-.rule-h {
-  border: none;
-  border-top: 1px solid var(--rule);
-  margin: 0;
-}
+.full-rule { border: none; border-top: 1px solid var(--rule); margin: 0; }
 
 /* ── NAV ── */
 header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  background: var(--ink);
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100; background: var(--ink);
   border-bottom: 1px solid var(--rule);
 }
-
 .nav-inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 3rem;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  max-width: 1280px; margin: 0 auto; padding: 0 3rem;
+  height: 52px; display: flex; align-items: center; justify-content: space-between;
 }
-
 .nav-brand {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
+  display: flex; align-items: baseline; gap: 0.75rem;
+  text-decoration: none;
 }
-
-.nav-name {
-  font-family: 'EB Garamond', serif;
-  font-weight: 400;
-  font-size: 1.15rem;
-  color: var(--white);
-  letter-spacing: 0.04em;
-}
-
+.nav-name { font-family: 'EB Garamond', serif; font-size: 1.05rem; color: var(--white); }
 .nav-region {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--dim);
+  font-family: 'DM Mono', monospace; font-size: 0.5rem;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--dim);
 }
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-}
-
+.nav-links { display: flex; align-items: center; gap: 2.5rem; }
 .nav-link {
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--mid);
-  text-decoration: none;
-  transition: color 0.2s;
+  font-family: 'DM Mono', monospace; font-size: 0.55rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--dim); text-decoration: none; transition: color 0.2s;
 }
-.nav-link:hover { color: var(--white); }
-
+.nav-link:hover { color: var(--light); }
 .nav-cta {
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold-l);
-  text-decoration: none;
-  border: 1px solid rgba(168,131,42,0.4);
-  padding: 0.45rem 1.1rem;
-  transition: all 0.25s;
+  font-family: 'DM Mono', monospace; font-size: 0.55rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold-l); text-decoration: none; transition: color 0.2s;
 }
-.nav-cta:hover {
-  background: rgba(168,131,42,0.08);
-  border-color: var(--gold-l);
-}
+.nav-cta:hover { color: var(--gold); }
 
 /* ── HERO ── */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 3rem 6rem;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding-top: 60px;
-}
-
+.hero { padding: 120px 3rem 5rem; }
 .hero-eyebrow {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 2.5rem;
+  font-family: 'DM Mono', monospace; font-size: 0.55rem;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold-l); margin-bottom: 2.5rem;
 }
-
 .hero-title {
   font-family: 'EB Garamond', serif;
-  font-weight: 400;
-  font-size: clamp(3.5rem, 7vw, 7rem);
-  line-height: 1.0;
-  color: var(--white);
-  margin-bottom: 3.5rem;
-  max-width: 16ch;
+  font-size: clamp(2.8rem, 5.5vw, 5.5rem);
+  font-weight: 400; line-height: 1.08;
+  color: var(--white); margin-bottom: 4rem;
 }
-
-.hero-title em {
-  font-style: italic;
-  color: var(--light);
-}
-
-.hero-bottom {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
-  border-top: 1px solid var(--rule);
-  padding-top: 3rem;
-}
-
+.hero-title em { font-style: italic; color: var(--light); }
+.hero-bottom { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; }
 .hero-col-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--dim);
-  margin-bottom: 1rem;
+  font-family: 'DM Mono', monospace; font-size: 0.55rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold-l); margin-bottom: 1rem;
 }
+.hero-col-text { font-size: 0.82rem; line-height: 1.85; color: var(--dim); }
 
-.hero-col-text {
-  font-size: 0.82rem;
-  line-height: 1.75;
-  color: var(--mid);
-  max-width: 34ch;
+/* ── STATS ── */
+.stats-row {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-left: 1px solid var(--rule);
 }
-
-/* ── FULL-WIDTH DIVIDER ── */
-.full-rule {
-  border: none;
+.stat-item {
+  border-right: 1px solid var(--rule);
   border-top: 1px solid var(--rule);
-  width: 100%;
+  padding: 3rem 2.5rem;
+}
+.stat-figure {
+  font-family: 'EB Garamond', serif; font-size: 3rem;
+  font-weight: 400; color: var(--gold-l);
+  margin-bottom: 0.5rem; line-height: 1;
+}
+.stat-label {
+  font-family: 'DM Mono', monospace; font-size: 0.52rem;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim);
 }
 
-/* ── SECCIÓN GENÉRICA ── */
-.section {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 6rem 3rem;
-}
-
+/* ── SECTION BASE ── */
+.section { max-width: 1280px; margin: 0 auto; padding: 5rem 3rem; }
 .section-header {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
-  margin-bottom: 5rem;
-  align-items: start;
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 4rem; align-items: end; margin-bottom: 4rem;
 }
-
 .section-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--dim);
-  padding-top: 0.5rem;
+  font-family: 'DM Mono', monospace; font-size: 0.55rem;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-l);
 }
-
 .section-title {
   font-family: 'EB Garamond', serif;
-  font-weight: 400;
-  font-size: clamp(2rem, 4vw, 3.8rem);
-  line-height: 1.1;
-  color: var(--white);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 400; line-height: 1.2; color: var(--white);
 }
+.section-title em { font-style: italic; color: var(--light); }
 
-.section-title em {
-  font-style: italic;
-  color: var(--light);
+/* ── POR QUÉ AHORA ── */
+.porque-bg {
+  background: var(--ink-2);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
+.porque-intro {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; margin-bottom: 4rem;
+}
+.porque-intro-text { font-size: 0.82rem; line-height: 1.85; color: var(--dim); }
+.porque-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-left: 1px solid var(--rule);
+}
+.porque-item {
+  border-right: 1px solid var(--rule);
+  padding: 3rem 2.5rem; position: relative;
+}
+.porque-item::after {
+  content: attr(data-n);
+  position: absolute; top: 2rem; right: 2rem;
+  font-family: 'EB Garamond', serif; font-size: 5rem;
+  color: rgba(255,255,255,0.03); line-height: 1; pointer-events: none;
+}
+.porque-num {
+  font-family: 'DM Mono', monospace; font-size: 0.55rem;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold-l); margin-bottom: 1.75rem;
+}
+.porque-name {
+  font-family: 'EB Garamond', serif; font-size: 1.4rem;
+  font-weight: 400; color: var(--white);
+  margin-bottom: 1rem; line-height: 1.25;
+}
+.porque-desc { font-size: 0.78rem; line-height: 1.8; color: var(--dim); }
 
-/* ── TESIS ── */
+/* ── MODELO ── */
+.modelo-grid {
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  gap: 6rem; align-items: start;
+}
+.modelo-statement {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 400; line-height: 1.35;
+  color: var(--white); margin-bottom: 2.5rem;
+}
+.modelo-statement em { font-style: italic; color: var(--light); }
+.modelo-body { font-size: 0.82rem; line-height: 1.85; color: var(--dim); }
+.modelo-steps { border-top: 1px solid var(--rule); }
+.modelo-step { padding: 2.5rem 0; border-bottom: 1px solid var(--rule); }
+.modelo-step-num {
+  font-family: 'DM Mono', monospace; font-size: 0.55rem;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold-l); margin-bottom: 1rem;
+}
+.modelo-step-title {
+  font-family: 'EB Garamond', serif; font-size: 1.4rem;
+  font-weight: 400; color: var(--white);
+  margin-bottom: 0.75rem; line-height: 1.25;
+}
+.modelo-step-desc { font-size: 0.78rem; line-height: 1.8; color: var(--dim); }
+
+/* ── SECTORES ── */
 .tesis-bg {
   background: var(--ink-2);
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
-
 .tesis-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: grid; grid-template-columns: repeat(3, 1fr);
   border-left: 1px solid var(--rule);
 }
-
-.tesis-item {
-  border-right: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  padding: 3rem 2.5rem;
-  transition: background 0.3s;
-}
-.tesis-item:hover { background: var(--ink-3); }
-
+.tesis-item { border-right: 1px solid var(--rule); padding: 3rem 2.5rem; }
 .tesis-num {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 2rem;
+  font-family: 'DM Mono', monospace; font-size: 0.55rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--dim); margin-bottom: 1.5rem;
 }
-
 .tesis-name {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: var(--white);
-  margin-bottom: 1.25rem;
-  line-height: 1.2;
+  font-family: 'EB Garamond', serif; font-size: 1.8rem;
+  font-weight: 400; color: var(--white); margin-bottom: 1.25rem;
 }
-
-.tesis-desc {
-  font-size: 0.8rem;
-  line-height: 1.8;
-  color: var(--dim);
-}
-
-.tesis-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 2rem;
-}
-
+.tesis-desc { font-size: 0.78rem; line-height: 1.8; color: var(--dim); margin-bottom: 2rem; }
+.tesis-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .tesis-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--dim);
-  border: 1px solid var(--rule-l);
-  padding: 0.3rem 0.7rem;
+  font-family: 'DM Mono', monospace; font-size: 0.5rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--mid); border: 1px solid var(--rule-l); padding: 0.4rem 0.8rem;
 }
 
-/* ── ADVISORY ── */
-.advisory-intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  margin-bottom: 5rem;
-  align-items: end;
+/* ── LO QUE BUSCAMOS ── */
+.buscamos-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr;
+  gap: 6rem; align-items: start;
 }
-
-.advisory-intro-text {
+.buscamos-lead {
   font-family: 'EB Garamond', serif;
-  font-size: 1.15rem;
-  line-height: 1.85;
-  color: var(--mid);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-weight: 400; line-height: 1.35;
+  color: var(--white); margin-bottom: 2rem;
 }
-
-.advisory-intro-note {
-  font-size: 0.78rem;
-  line-height: 1.8;
-  color: var(--dim);
-  border-left: 1px solid var(--rule-l);
-  padding-left: 1.5rem;
-}
-
-.advisory-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-top: 1px solid var(--rule);
-}
-
-.advisory-row {
-  display: grid;
-  grid-template-columns: 3rem 1fr 1.8fr 1fr;
-  align-items: start;
-  gap: 2rem;
-  border-bottom: 1px solid var(--rule);
-  padding: 2rem 0;
-  transition: background 0.25s;
-  cursor: default;
-}
-.advisory-row:hover { background: var(--ink-2); margin: 0 -3rem; padding: 2rem 3rem; }
-
-.advisory-row-num {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.15em;
-  color: var(--gold);
-  padding-top: 0.3rem;
-}
-
-.advisory-row-title {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: var(--white);
-  line-height: 1.3;
-}
-
-.advisory-row-desc {
-  font-size: 0.78rem;
-  line-height: 1.75;
-  color: var(--dim);
-}
-
-.advisory-row-status {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--gold);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding-top: 0.3rem;
-}
-
-.advisory-row-status::before {
-  content: '';
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--gold);
-}
-
-/* ── PROPUESTA ── */
-.propuesta-bg {
-  background: var(--ink-2);
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-}
-
-.propuesta-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6rem;
-  align-items: start;
-}
-
-.propuesta-left {}
-
-.propuesta-statement {
-  font-family: 'EB Garamond', serif;
-  font-size: clamp(1.6rem, 3vw, 2.6rem);
-  font-weight: 400;
-  line-height: 1.3;
-  color: var(--white);
-  margin-bottom: 2rem;
-}
-
-.propuesta-statement em {
-  font-style: italic;
-  color: var(--gold-l);
-}
-
-.propuesta-body {
-  font-size: 0.82rem;
-  line-height: 1.85;
-  color: var(--dim);
-  margin-bottom: 3rem;
-}
-
-.carry-block {
-  border-top: 1px solid var(--rule-l);
-  padding-top: 2.5rem;
-}
-
-.carry-figure {
-  font-family: 'EB Garamond', serif;
-  font-size: 4.5rem;
-  font-weight: 400;
-  color: var(--gold-l);
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.carry-sub {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--dim);
-  margin-bottom: 1.25rem;
-}
-
-.carry-note {
-  font-size: 0.78rem;
-  line-height: 1.75;
-  color: var(--dim);
-  max-width: 38ch;
-}
-
-.carry-note strong {
-  color: var(--light);
-  font-weight: 400;
-}
-
-.propuesta-right {}
-
-.oferta-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.oferta-item {
-  border-bottom: 1px solid var(--rule);
-  padding: 2rem 0;
-  display: grid;
-  grid-template-columns: 2.5rem 1fr;
-  gap: 1.5rem;
-  align-items: start;
-}
-.oferta-item:first-child { border-top: 1px solid var(--rule); }
-
-.oferta-n {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.15em;
-  color: var(--gold);
-  padding-top: 0.35rem;
-}
-
-.oferta-content {}
-
-.oferta-title {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.1rem;
-  color: var(--white);
-  margin-bottom: 0.5rem;
-}
-
-.oferta-desc {
-  font-size: 0.77rem;
-  line-height: 1.75;
-  color: var(--dim);
-}
-
-/* ── COMPROMISOS ── */
-.compromisos-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-left: 1px solid var(--rule);
-}
-
-.compromiso {
-  border-right: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  padding: 2.5rem 2rem;
-}
-
-.compromiso-n {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.2em;
-  color: var(--gold);
-  margin-bottom: 1.5rem;
-}
-
-.compromiso-title {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.1rem;
-  color: var(--white);
-  margin-bottom: 0.75rem;
-  line-height: 1.3;
-}
-
-.compromiso-desc {
-  font-size: 0.77rem;
-  line-height: 1.75;
-  color: var(--dim);
+.buscamos-lead em { font-style: italic; color: var(--light); }
+.buscamos-body { font-size: 0.82rem; line-height: 1.85; color: var(--dim); }
+.buscamos-list { border-top: 1px solid var(--rule); }
+.buscamos-item {
+  padding: 1.5rem 0; border-bottom: 1px solid var(--rule);
+  font-size: 0.82rem; line-height: 1.7; color: var(--dim);
 }
 
 /* ── GP ── */
 .gp-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 6rem;
-  align-items: start;
+  display: grid; grid-template-columns: 1.5fr 1fr;
+  gap: 6rem; align-items: start;
 }
-
 .gp-title {
   font-family: 'EB Garamond', serif;
   font-size: clamp(1.8rem, 3vw, 3rem);
-  font-weight: 400;
-  line-height: 1.25;
-  color: var(--white);
-  margin-bottom: 2.5rem;
+  font-weight: 400; line-height: 1.25;
+  color: var(--white); margin-bottom: 2.5rem;
 }
-
 .gp-title em { font-style: italic; color: var(--light); }
-
-.gp-bio {
-  font-size: 0.82rem;
-  line-height: 1.85;
-  color: var(--dim);
-  margin-bottom: 2.5rem;
-}
-
-.gp-career {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  border-top: 1px solid var(--rule);
-}
-
+.gp-bio { font-size: 0.82rem; line-height: 1.85; color: var(--dim); margin-bottom: 2.5rem; }
+.gp-career { border-top: 1px solid var(--rule); }
 .gp-career-item {
-  display: grid;
-  grid-template-columns: 1fr 1.8fr;
-  gap: 2rem;
-  border-bottom: 1px solid var(--rule);
-  padding: 1.25rem 0;
+  display: grid; grid-template-columns: 1fr 1.8fr;
+  gap: 2rem; border-bottom: 1px solid var(--rule); padding: 1.25rem 0;
 }
-
 .gp-career-org {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.1em;
-  color: var(--mid);
+  font-family: 'DM Mono', monospace; font-size: 0.62rem;
+  letter-spacing: 0.1em; color: var(--mid);
 }
-
-.gp-career-role {
-  font-size: 0.78rem;
-  color: var(--dim);
-}
-
-.gp-card {
-  border: 1px solid var(--rule-l);
-  padding: 2.5rem;
-}
-
+.gp-career-role { font-size: 0.78rem; color: var(--dim); }
+.gp-card { border: 1px solid var(--rule-l); padding: 2.5rem; }
 .gp-card-name {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: var(--white);
-  margin-bottom: 0.25rem;
+  font-family: 'EB Garamond', serif; font-size: 1.6rem;
+  font-weight: 400; color: var(--white); margin-bottom: 0.25rem;
 }
-
 .gp-card-role {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 2.5rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--rule);
+  font-family: 'DM Mono', monospace; font-size: 0.55rem;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule);
 }
-
-.gp-card-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.gp-card-row {}
+.gp-card-rows { display: flex; flex-direction: column; gap: 1.25rem; }
 .gp-card-row-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.52rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--dim);
-  margin-bottom: 0.3rem;
+  font-family: 'DM Mono', monospace; font-size: 0.52rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--dim); margin-bottom: 0.3rem;
 }
-.gp-card-row-value {
-  font-size: 0.8rem;
-  color: var(--mid);
-}
-.gp-card-row-value a {
-  color: var(--mid);
-  text-decoration: none;
-  transition: color 0.2s;
-}
+.gp-card-row-value { font-size: 0.8rem; color: var(--mid); }
+.gp-card-row-value a { color: var(--mid); text-decoration: none; transition: color 0.2s; }
 .gp-card-row-value a:hover { color: var(--gold-l); }
 
-/* ── PASOS ── */
-.pasos-bg {
+/* ── PARAMS ── */
+.params-bg {
   background: var(--ink-2);
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
-
-.pasos-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.params-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
   border-left: 1px solid var(--rule);
 }
-
-.paso {
-  border-right: 1px solid var(--rule);
-  padding: 3.5rem 2.5rem;
-  position: relative;
+.param-item { border-right: 1px solid var(--rule); padding: 2.5rem; }
+.param-label {
+  font-family: 'DM Mono', monospace; font-size: 0.52rem;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--dim); margin-bottom: 0.75rem;
 }
-
-.paso::after {
-  content: attr(data-n);
-  position: absolute;
-  top: 2.5rem;
-  right: 2rem;
-  font-family: 'EB Garamond', serif;
-  font-size: 5rem;
-  color: rgba(255,255,255,0.03);
-  line-height: 1;
-  pointer-events: none;
-}
-
-.paso-n {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.75rem;
-}
-
-.paso-title {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: var(--white);
-  margin-bottom: 1rem;
-  line-height: 1.25;
-}
-
-.paso-desc {
-  font-size: 0.78rem;
-  line-height: 1.8;
-  color: var(--dim);
+.param-value {
+  font-family: 'EB Garamond', serif; font-size: 1.4rem;
+  color: var(--white); font-weight: 400;
 }
 
 /* ── CTA ── */
 .cta-section {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 8rem 3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6rem;
-  align-items: center;
+  max-width: 1280px; margin: 0 auto; padding: 8rem 3rem;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: center;
 }
-
 .cta-title {
   font-family: 'EB Garamond', serif;
   font-size: clamp(2.5rem, 5vw, 5rem);
-  font-weight: 400;
-  line-height: 1.05;
-  color: var(--white);
+  font-weight: 400; line-height: 1.05; color: var(--white);
 }
-
-.cta-title em {
-  font-style: italic;
-  display: block;
-  color: var(--light);
-}
-
-.cta-right {}
-
-.cta-body {
-  font-size: 0.82rem;
-  line-height: 1.85;
-  color: var(--dim);
-  margin-bottom: 3rem;
-}
-
-.cta-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
+.cta-title em { font-style: italic; display: block; color: var(--light); }
+.cta-body { font-size: 0.82rem; line-height: 1.85; color: var(--dim); margin-bottom: 3rem; }
+.cta-actions { display: flex; flex-direction: column; gap: 1rem; }
 .btn-gold {
-  display: inline-block;
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink);
-  background: var(--gold-l);
-  padding: 1rem 2.5rem;
-  text-decoration: none;
-  transition: background 0.25s;
-  text-align: center;
+  display: inline-block; font-size: 0.68rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink); background: var(--gold-l);
+  padding: 1rem 2.5rem; text-decoration: none;
+  transition: background 0.25s; text-align: center;
 }
 .btn-gold:hover { background: var(--gold); }
-
 .btn-ghost {
-  display: inline-block;
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--mid);
-  background: transparent;
-  border: 1px solid var(--rule-l);
-  padding: 1rem 2.5rem;
-  text-decoration: none;
-  transition: all 0.25s;
-  text-align: center;
+  display: inline-block; font-size: 0.68rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--mid); background: transparent;
+  border: 1px solid var(--rule-l); padding: 1rem 2.5rem;
+  text-decoration: none; transition: all 0.25s; text-align: center;
 }
-.btn-ghost:hover {
-  color: var(--white);
-  border-color: var(--rule-l);
-  background: var(--ink-2);
-}
-
+.btn-ghost:hover { color: var(--white); background: var(--ink-2); }
 .cta-note {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--dim);
-  margin-top: 1.5rem;
+  font-family: 'DM Mono', monospace; font-size: 0.55rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--dim); margin-top: 1.5rem;
 }
 
 /* ── FOOTER ── */
-footer {
-  border-top: 1px solid var(--rule);
-  background: var(--ink);
-}
-
+footer { border-top: 1px solid var(--rule); background: var(--ink); }
 .footer-inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2.5rem 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem;
+  display: flex; align-items: center; justify-content: space-between;
 }
-
-.footer-brand {
-  font-family: 'EB Garamond', serif;
-  font-size: 1rem;
-  color: var(--mid);
-}
-
+.footer-brand { font-family: 'EB Garamond', serif; font-size: 1rem; color: var(--mid); }
 .footer-frase {
-  font-family: 'EB Garamond', serif;
-  font-style: italic;
-  font-size: 0.85rem;
-  color: var(--gold);
-  text-align: center;
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: 0.85rem; color: var(--gold); text-align: center;
 }
-
 .footer-meta {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.52rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--dim);
-  text-align: right;
-  line-height: 1.8;
+  font-family: 'DM Mono', monospace; font-size: 0.52rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--dim); text-align: right; line-height: 1.8;
 }
-
-.footer-meta a {
-  color: var(--dim);
-  text-decoration: none;
-  display: block;
-  transition: color 0.2s;
-}
+.footer-meta a { color: var(--dim); text-decoration: none; display: block; transition: color 0.2s; }
 .footer-meta a:hover { color: var(--gold-l); }
 
 /* ── ANIMATIONS ── */
@@ -831,7 +373,6 @@ footer {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
 .hero-eyebrow { animation: fadeIn 1s ease 0.2s both; }
 .hero-title   { animation: fadeIn 1s ease 0.4s both; }
 .hero-bottom  { animation: fadeIn 1s ease 0.7s both; }
@@ -840,22 +381,23 @@ footer {
 @media (max-width: 960px) {
   .nav-links { display: none; }
   .nav-inner { padding: 0 1.5rem; }
-  .hero { padding: 60px 1.5rem 4rem; }
+  .hero { padding: 80px 1.5rem 4rem; }
   .hero-bottom { grid-template-columns: 1fr; gap: 2rem; }
   .section { padding: 4rem 1.5rem; }
   .section-header { grid-template-columns: 1fr; gap: 1.5rem; }
+  .stats-row { grid-template-columns: 1fr 1fr; }
+  .porque-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .porque-grid { grid-template-columns: 1fr; }
+  .modelo-grid { grid-template-columns: 1fr; gap: 3rem; }
   .tesis-grid { grid-template-columns: 1fr; }
-  .advisory-intro { grid-template-columns: 1fr; gap: 2.5rem; }
-  .advisory-row { grid-template-columns: 2rem 1fr; }
-  .advisory-row-desc, .advisory-row-status { display: none; }
-  .propuesta-grid { grid-template-columns: 1fr; gap: 3.5rem; }
-  .compromisos-row { grid-template-columns: 1fr 1fr; }
+  .buscamos-grid { grid-template-columns: 1fr; gap: 3rem; }
   .gp-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .pasos-row { grid-template-columns: 1fr; }
+  .params-grid { grid-template-columns: 1fr 1fr; }
   .cta-section { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; }
   .footer-inner { flex-direction: column; gap: 1.25rem; text-align: center; }
   .footer-meta { text-align: center; }
 }
+
 </style>
 </head>
 <body>
@@ -863,42 +405,102 @@ footer {
 <!-- NAV -->
 <header>
   <div class="nav-inner">
-    <div class="nav-brand">
+    <a href="#" class="nav-brand">
       <span class="nav-name">TMA Ventures</span>
       <span class="nav-region">Tampico · Madero · Altamira</span>
-    </div>
+    </a>
     <nav class="nav-links">
+      <a href="#porque" class="nav-link">Por Qué Ahora</a>
+      <a href="#modelo" class="nav-link">Modelo</a>
       <a href="#tesis" class="nav-link">Tesis</a>
-      <a href="#advisory" class="nav-link">Advisory Board</a>
-      <a href="#propuesta" class="nav-link">Propuesta</a>
       <a href="#gp" class="nav-link">El Fondo</a>
       <a href="#contacto" class="nav-cta">Contacto</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
 <main>
 <div style="max-width:1280px; margin:0 auto;">
+
+  <!-- HERO -->
   <div class="hero">
-    <p class="hero-eyebrow">Fondo de Capital de Riesgo · Noreste Industrial de México</p>
+    <p class="hero-eyebrow">Fondo de Capital de Riesgo · Corredor Industrial del Golfo</p>
     <h1 class="hero-title">
-      Capital que activa<br>
-      <em>el ecosistema</em><br>
-      industrial.
+      El fondo que conecta<br>
+      <em>los problemas industriales</em><br>
+      del corredor TMA con<br>
+      <em>las soluciones del siglo XXI.</em>
     </h1>
     <div class="hero-bottom">
       <div>
         <p class="hero-col-label">El Fondo</p>
-        <p class="hero-col-text">El primer vehículo de capital de riesgo con foco exclusivo en el corredor Tampico–Madero–Altamira. $7.5M USD. Pre-seed a Serie A.</p>
+        <p class="hero-col-text">El primer vehículo de venture capital que opera desde adentro del corredor Tampico–Madero–Altamira. $7.5M USD. Pre-seed a Serie A.</p>
       </div>
       <div>
-        <p class="hero-col-label">La Tesis</p>
-        <p class="hero-col-text">Invertimos en startups que digitalizan, conectan y escalan el ecosistema industrial de la región: Industria 4.0, energía y logística.</p>
+        <p class="hero-col-label">El Modelo</p>
+        <p class="hero-col-text">No esperamos que las startups lleguen. Mapeamos los problemas reales de los corporativos del corredor y conectamos las soluciones donde estén. Open Innovation ejecutado desde el interior.</p>
       </div>
       <div>
         <p class="hero-col-label">El Momento</p>
-        <p class="hero-col-text">El nearshoring está reconfigurando las cadenas de valor globales. TMA es el hub industrial más estratégico del noreste de México — y nadie está invirtiendo aquí todavía.</p>
+        <p class="hero-col-text">Trión arrancó. El Polo de Desarrollo tiene respaldo presidencial. Las 1,600 hectáreas disponibles en Altamira atraen empresas de cinco continentes. Nadie está invirtiendo aquí todavía.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- STATS -->
+<div style="max-width:1280px; margin:0 auto;">
+  <div class="stats-row">
+    <div class="stat-item">
+      <div class="stat-figure">200+</div>
+      <div class="stat-label">Corporativos en el corredor</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-figure">$10.4B</div>
+      <div class="stat-label">Proyecto Trión · USD</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-figure">39%</div>
+      <div class="stat-label">PIB metro del Puerto Altamira</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-figure">1°</div>
+      <div class="stat-label">Único fondo VC en TMA</div>
+    </div>
+  </div>
+</div>
+
+<hr class="full-rule">
+
+<!-- POR QUÉ AHORA -->
+<div class="porque-bg" id="porque">
+  <div class="section">
+    <div class="section-header">
+      <p class="section-label">Por Qué Ahora</p>
+      <h2 class="section-title">
+        Tres fuerzas.<br>
+        <em>Un momento que no se repite.</em>
+      </h2>
+    </div>
+    <div class="porque-intro">
+      <p class="porque-intro-text">Monterrey y Querétaro están saturados. TMA tiene la infraestructura, la demanda y el respaldo institucional — pero todavía no tiene el ecosistema de innovación que lo conecta con el siglo XXI. Ese es nuestro trabajo.</p>
+    </div>
+    <div class="porque-grid">
+      <div class="porque-item" data-n="1">
+        <div class="porque-num">01 — Catalizador</div>
+        <h3 class="porque-name">Proyecto Trión<br>+ Polo de Desarrollo</h3>
+        <p class="porque-desc">La tercera inversión más grande en la historia de México arrancó en el Puerto de Altamira en marzo 2026. Woodside Energy y Pemex: $10,400 millones de dólares. Altamira fue declarada Primer Polo de Desarrollo Económico para el Bienestar del noreste, con respaldo presidencial. Ambos generan demanda masiva de proveedores de tecnología que hoy no existen en el corredor.</p>
+      </div>
+      <div class="porque-item" data-n="2">
+        <div class="porque-num">02 — Viento de Cola</div>
+        <h3 class="porque-name">Nearshoring</h3>
+        <p class="porque-desc">Tamaulipas tiene 158 proyectos de inversión confirmados por $20.3 mil millones de dólares. Altamira, con 1,600 hectáreas disponibles, es el segundo polo de atracción del estado. Las empresas que llegan traen estándares tecnológicos globales que el ecosistema local no está preparado para servir. Eso es oportunidad de inversión.</p>
+      </div>
+      <div class="porque-item" data-n="3">
+        <div class="porque-num">03 — Ventana</div>
+        <h3 class="porque-name">Antes del Boom</h3>
+        <p class="porque-desc">Los fondos de VC llegaron a Monterrey y Querétaro cuando los ecosistemas estaban maduros — y pagaron múltiplos de entrada elevados. TMA es el mercado antes del boom. El corredor tiene la infraestructura, tiene la demanda, tiene el respaldo institucional — pero todavía no tiene quien conecte todo.</p>
       </div>
     </div>
   </div>
@@ -906,11 +508,54 @@ footer {
 
 <hr class="full-rule">
 
-<!-- TESIS -->
+<!-- MODELO OPEN INNOVATION -->
+<div id="modelo">
+  <div class="section">
+    <div class="section-header">
+      <p class="section-label">Cómo Operamos</p>
+      <h2 class="section-title">
+        Open Innovation.<br>
+        <em>Desde adentro del corredor.</em>
+      </h2>
+    </div>
+    <div class="modelo-grid">
+      <div>
+        <p class="modelo-statement">
+          No esperamos a que las startups lleguen.<br>
+          <em>Mapeamos los problemas que más cuestan a los corporativos del corredor, convocamos las soluciones donde estén, y conectamos ambos lados.</em>
+        </p>
+        <p class="modelo-body">
+          Invertimos en startups que llegan con un problema validado y un cliente potencial identificado — antes de escribir el primer cheque. Para los corporativos del corredor, TMA Ventures es el canal que les trae soluciones tecnológicas adaptadas a sus problemas específicos. No es un proveedor más — es el mecanismo que activa el ecosistema desde adentro.
+        </p>
+      </div>
+      <div class="modelo-steps">
+        <div class="modelo-step">
+          <div class="modelo-step-num">Eslabón 01</div>
+          <h3 class="modelo-step-title">Mapeo de Problemas</h3>
+          <p class="modelo-step-desc">Entrevistas estructuradas con directores de planta, jefes de compras, presidentes de asociaciones y gerentes de operaciones del corredor. Documentamos los 10–15 dolores más frecuentes, más costosos y menos resueltos en Industria 4.0, Energía y Logística. Este trabajo es continuo — es el activo más valioso del fondo.</p>
+        </div>
+        <div class="modelo-step">
+          <div class="modelo-step-num">Eslabón 02</div>
+          <h3 class="modelo-step-title">Convocatoria</h3>
+          <p class="modelo-step-desc">Con los problemas documentados, abrimos convocatorias a startups que los resuelvan. No necesitan ser locales — necesitan tener la solución correcta. Fuentes: aceleradoras, fondos pares, universidades, y outreach directo en Monterrey, CDMX y Texas.</p>
+        </div>
+        <div class="modelo-step">
+          <div class="modelo-step-num">Eslabón 03</div>
+          <h3 class="modelo-step-title">Inversión</h3>
+          <p class="modelo-step-desc">Invertimos en startups que llegan con tres ventajas: un problema validado por un corporativo real, un cliente potencial identificado en el corredor, y acceso a un piloto pagado desde el inicio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="full-rule">
+
+<!-- SECTORES -->
 <div class="tesis-bg" id="tesis">
   <div class="section">
     <div class="section-header">
-      <p class="section-label">Tesis de Inversión</p>
+      <p class="section-label">Sectores de Inversión</p>
       <h2 class="section-title">
         Tres sectores.<br>
         <em>Un ecosistema integrado.</em>
@@ -920,7 +565,7 @@ footer {
       <div class="tesis-item">
         <div class="tesis-num">01 — Pilar Principal</div>
         <h3 class="tesis-name">Industria 4.0</h3>
-        <p class="tesis-desc">Software y hardware que digitalizan la manufactura avanzada del corredor industrial. Donde la eficiencia operativa se convierte en ventaja competitiva sostenible.</p>
+        <p class="tesis-desc">Software y hardware que digitalizan operaciones en manufactura, petroquímica y energía. Los corporativos del corredor gastan millones en downtime evitable — la startup que lo reduce tiene un cliente garantizado.</p>
         <div class="tesis-tags">
           <span class="tesis-tag">IIoT</span>
           <span class="tesis-tag">MES / ERP</span>
@@ -931,7 +576,7 @@ footer {
       <div class="tesis-item">
         <div class="tesis-num">02 — Pilar Principal</div>
         <h3 class="tesis-name">Energía</h3>
-        <p class="tesis-desc">Soluciones para la industria petroquímica y la transición energética. Un corredor con infraestructura única que demanda tecnología a la altura de su escala.</p>
+        <p class="tesis-desc">Soluciones para la industria petroquímica, la transición energética y la eficiencia operativa en plantas intensivas en capital. Trión va a generar demanda de tecnología especializada en aguas profundas por décadas.</p>
         <div class="tesis-tags">
           <span class="tesis-tag">Gestión de Activos</span>
           <span class="tesis-tag">Eficiencia Energética</span>
@@ -942,7 +587,7 @@ footer {
       <div class="tesis-item">
         <div class="tesis-num">03 — Pilar Principal</div>
         <h3 class="tesis-name">Logística</h3>
-        <p class="tesis-desc">Plataformas que conectan la infraestructura portuaria con las cadenas de suministro globales. El puerto de Altamira como activo subutilizado digitalmente.</p>
+        <p class="tesis-desc">Plataformas que digitalizan y optimizan cadenas de suministro, operaciones portuarias y conectividad multimodal. El Puerto de Altamira mueve millones de toneladas con infraestructura logística que tiene décadas sin una capa de tecnología moderna encima.</p>
         <div class="tesis-tags">
           <span class="tesis-tag">Digitalización Portuaria</span>
           <span class="tesis-tag">Supply Chain Visibility</span>
@@ -956,172 +601,30 @@ footer {
 
 <hr class="full-rule">
 
-<!-- ADVISORY BOARD -->
-<div id="advisory">
-  <div class="section">
-    <div class="section-header">
-      <p class="section-label">Advisory Board</p>
-      <h2 class="section-title">
-        Seis sillas.<br>
-        <em>Actualmente en formación.</em>
-      </h2>
-    </div>
-
-    <div class="advisory-intro">
-      <p class="advisory-intro-text">
-        Buscamos a las personas que conocen esta región por dentro — que han operado en sus corporativos, construido sus empresas o invertido en sus mercados. Personas con red activa y disposición a hacer que las cosas ocurran.
-      </p>
-      <p class="advisory-intro-note">
-        Los miembros del Advisory Board reciben una participación económica real en el fondo — carried interest con vesting en 4 años. No es visibilidad. Es una propuesta de negocios.
-      </p>
-    </div>
-
-    <div class="advisory-table">
-      <div class="advisory-row">
-        <div class="advisory-row-num">01</div>
-        <div class="advisory-row-title">Experto Industrial<br>Energía / Petroquímica</div>
-        <div class="advisory-row-desc">Exdirector de operaciones, innovación o supply chain en corporativo del corredor de Altamira. Red directa con BASF, Dow, Braskem, Pemex o Air Liquide.</div>
-        <div class="advisory-row-status">Buscando</div>
-      </div>
-      <div class="advisory-row">
-        <div class="advisory-row-num">02</div>
-        <div class="advisory-row-title">Experto Industrial<br>Logística / Puerto</div>
-        <div class="advisory-row-desc">Experiencia en operaciones portuarias, supply chain o distribución regional. Conoce la API Tampico y el ecosistema del Golfo de México.</div>
-        <div class="advisory-row-status">Buscando</div>
-      </div>
-      <div class="advisory-row">
-        <div class="advisory-row-num">03</div>
-        <div class="advisory-row-title">Empresario Local<br>TMA</div>
-        <div class="advisory-row-desc">Empresario exitoso de la región con empresa establecida y disposición a ser LP del fondo. Su presencia abre puertas que ningún fondo externo puede abrir.</div>
-        <div class="advisory-row-status">Buscando</div>
-      </div>
-      <div class="advisory-row">
-        <div class="advisory-row-num">04</div>
-        <div class="advisory-row-title">Empresario Noreste<br>Monterrey / Texas</div>
-        <div class="advisory-row-desc">Puente entre TMA y los ecosistemas de Monterrey y el sur de Texas. Experiencia en scaling de empresa o exit estratégico a corporativo.</div>
-        <div class="advisory-row-status">Buscando</div>
-      </div>
-      <div class="advisory-row">
-        <div class="advisory-row-num">05</div>
-        <div class="advisory-row-title">Experto en VC<br>Fondo Nacional</div>
-        <div class="advisory-row-desc">Partner o ex-partner de fondo VC establecido en México. Aporta credibilidad institucional, orientación en términos y acceso a rondas siguientes.</div>
-        <div class="advisory-row-status">Buscando</div>
-      </div>
-      <div class="advisory-row">
-        <div class="advisory-row-num">06</div>
-        <div class="advisory-row-title">Especialista Legal<br>Capital Privado / M&A</div>
-        <div class="advisory-row-desc">Socio o ex-socio de despacho especializado en capital privado. Orienta al fondo en due diligence legal y estructuración de exits.</div>
-        <div class="advisory-row-status">Buscando</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr class="full-rule">
-
-<!-- PROPUESTA -->
-<div class="propuesta-bg" id="propuesta">
-  <div class="section">
-    <div class="section-header">
-      <p class="section-label">La Propuesta</p>
-      <h2 class="section-title">
-        Lo que se ofrece.<br>
-        <em>Lo que se pide.</em>
-      </h2>
-    </div>
-    <div class="propuesta-grid">
-      <div class="propuesta-left">
-        <p class="propuesta-statement">
-          No le pedimos que aparezca en un deck.<br>
-          <em>Le ofrecemos participación económica real.</em>
-        </p>
-        <p class="propuesta-body">
-          Los advisors de TMA Ventures reciben carried interest con vesting en 4 años. Ganan cuando el fondo gana. Eso alinea completamente los incentivos — y convierte la conversación en una propuesta de negocios, no en un favor.
-        </p>
-        <div class="carry-block">
-          <div class="carry-figure">0.50%</div>
-          <p class="carry-sub">Carried Interest · Máximo por Silla</p>
-          <p class="carry-note">
-            En el escenario base (2.5x MOIC sobre $7.5M USD), esto equivale a <strong>$40K–$80K USD</strong> distribuidos conforme ocurran exits en los próximos 3–5 años.
-          </p>
-        </div>
-      </div>
-
-      <div class="propuesta-right">
-        <div class="oferta-list">
-          <div class="oferta-item">
-            <div class="oferta-n">A</div>
-            <div class="oferta-content">
-              <div class="oferta-title">Carried Interest con Vesting</div>
-              <p class="oferta-desc">0.25%–0.50% del fondo. Vesting lineal en 4 años con cliff de 1 año. Gana proporcional al desempeño del fondo.</p>
-            </div>
-          </div>
-          <div class="oferta-item">
-            <div class="oferta-n">B</div>
-            <div class="oferta-content">
-              <div class="oferta-title">Derecho de Co-Inversión</div>
-              <p class="oferta-desc">Acceso prioritario a co-invertir en startups del portafolio a la misma valuación que el fondo — antes que el mercado.</p>
-            </div>
-          </div>
-          <div class="oferta-item">
-            <div class="oferta-n">C</div>
-            <div class="oferta-content">
-              <div class="oferta-title">Acceso al Deal Flow</div>
-              <p class="oferta-desc">Pipeline completo de startups antes que el mercado general. Inteligencia del ecosistema industrial TMA mensualmente.</p>
-            </div>
-          </div>
-          <div class="oferta-item">
-            <div class="oferta-n">D</div>
-            <div class="oferta-content">
-              <div class="oferta-title">Red Exclusiva del Fondo</div>
-              <p class="oferta-desc">Comunidad privada de LPs, advisors y fundadores. Eventos TMA Connect y Demo Days dos veces al año.</p>
-            </div>
-          </div>
-          <div class="oferta-item">
-            <div class="oferta-n">E</div>
-            <div class="oferta-content">
-              <div class="oferta-title">Membresía Fundadora</div>
-              <p class="oferta-desc">Reconocimiento como miembro fundador del primer fondo VC del corredor industrial del noreste de México.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr class="full-rule">
-
-<!-- COMPROMISOS -->
+<!-- LO QUE BUSCAMOS -->
 <div>
   <div class="section">
     <div class="section-header">
-      <p class="section-label">Compromisos</p>
+      <p class="section-label">Lo Que Buscamos</p>
       <h2 class="section-title">
-        Concreto.<br>
-        <em>Sin ambigüedad.</em>
+        No buscamos startups perfectas.<br>
+        <em>Buscamos startups con el problema correcto.</em>
       </h2>
     </div>
-    <div class="compromisos-row">
-      <div class="compromiso">
-        <div class="compromiso-n">01</div>
-        <h3 class="compromiso-title">4 Reuniones Anuales</h3>
-        <p class="compromiso-desc">Participación en las sesiones trimestrales del Advisory Board. Dos horas por sesión. Agenda enviada 48 horas antes.</p>
+    <div class="buscamos-grid">
+      <div>
+        <p class="buscamos-lead">
+          El corredor TMA no necesita más capital industrial.<br>
+          <em>Lo que no tiene es tecnología que resuelva sus problemas.</em>
+        </p>
+        <p class="buscamos-body">Los corporativos del corredor enfrentan desafíos operativos reales — en mantenimiento, eficiencia energética, cadena de suministro, digitalización, seguridad industrial — que los proveedores tradicionales no han resuelto. Al mismo tiempo, startups en México, Monterrey, Texas y otros ecosistemas tienen soluciones que no llegan al corredor porque no tienen acceso, ni contexto, ni un cliente que valide su producto. TMA Ventures existe para cerrar esa brecha.</p>
       </div>
-      <div class="compromiso">
-        <div class="compromiso-n">02</div>
-        <h3 class="compromiso-title">Due Diligence Sectorial</h3>
-        <p class="compromiso-desc">Validación técnica de startups en su área de expertise cuando el Comité de Inversión lo requiera.</p>
-      </div>
-      <div class="compromiso">
-        <div class="compromiso-n">03</div>
-        <h3 class="compromiso-title">3 Introducciones / Año</h3>
-        <p class="compromiso-desc">Warm intros activas a clientes potenciales, LPs o co-inversores para el fondo o el portafolio. Mínimo tres al año.</p>
-      </div>
-      <div class="compromiso">
-        <div class="compromiso-n">04</div>
-        <h3 class="compromiso-title">1–2 Horas / Mes</h3>
-        <p class="compromiso-desc">Disponibilidad para consultas puntuales del GP en temas estratégicos, sectoriales o de red de contactos.</p>
+      <div class="buscamos-list">
+        <div class="buscamos-item">El problema que resuelven ya existe y ya cuesta dinero en el corredor TMA o en corredores industriales similares del noreste.</div>
+        <div class="buscamos-item">El equipo entiende el sector al que sirve — no desde afuera, sino desde la operación.</div>
+        <div class="buscamos-item">La solución puede pilotarse en 90 días con un corporativo real. No necesitamos tracción masiva — necesitamos evidencia de que funciona en campo.</div>
+        <div class="buscamos-item">El mercado no es una proyección de Excel. Es una lista de corporativos que ya tienen el problema y presupuesto para resolverlo.</div>
+        <div class="buscamos-item">No pedimos que sean de Tampico. Pedimos que estén dispuestos a construir para Tampico.</div>
       </div>
     </div>
   </div>
@@ -1136,7 +639,7 @@ footer {
       <p class="section-label">El GP Fundador</p>
       <h2 class="section-title">
         El fondo.<br>
-        <em>Las personas detrás.</em>
+        <em>La persona detrás.</em>
       </h2>
     </div>
     <div class="gp-grid">
@@ -1147,9 +650,7 @@ footer {
           no generan el retorno que<br>
           <em>deberían generar.</em>
         </h3>
-        <p class="gp-bio">
-          Ahora construyo el canal para que el capital, el talento y las oportunidades fluyan de manera eficiente en la región que mejor conozco. TMA Ventures es la confluencia de dos décadas de trabajo en consultoría estratégica industrial y la convicción de que el noreste de México está en un punto de inflexión histórico.
-        </p>
+        <p class="gp-bio">Ahora construyo el canal para que el capital, el talento y las oportunidades fluyan de manera eficiente en la región que mejor conozco. TMA Ventures es la confluencia de dos décadas de trabajo en consultoría estratégica industrial y la convicción de que el noreste de México está en un punto de inflexión histórico.</p>
         <div class="gp-career">
           <div class="gp-career-item">
             <span class="gp-career-org">Sintelo & Co.</span>
@@ -1177,14 +678,13 @@ footer {
           </div>
         </div>
       </div>
-
       <div class="gp-card">
-        <div class="gp-card-name">Jorge Castro</div>
+        <div class="gp-card-name">Jorge Prax</div>
         <div class="gp-card-role">Managing Partner · TMA Ventures</div>
         <div class="gp-card-rows">
           <div class="gp-card-row">
             <div class="gp-card-row-label">Email</div>
-            <div class="gp-card-row-value"><a href="mailto:jorge@sintelo.com">jorge@sintelo.com</a></div>
+            <div class="gp-card-row-value"><a href="mailto:jorge@tmaventures.vc">jorge@tmaventures.vc</a></div>
           </div>
           <div class="gp-card-row">
             <div class="gp-card-row-label">Teléfono</div>
@@ -1214,31 +714,25 @@ footer {
 
 <hr class="full-rule">
 
-<!-- PASOS -->
-<div class="pasos-bg">
-  <div class="section">
-    <div class="section-header">
-      <p class="section-label">Siguientes Pasos</p>
-      <h2 class="section-title">
-        Simple.<br>
-        <em>Tres pasos.</em>
-      </h2>
-    </div>
-    <div class="pasos-row">
-      <div class="paso" data-n="1">
-        <div class="paso-n">Paso 01</div>
-        <h3 class="paso-title">Reunión de Presentación</h3>
-        <p class="paso-desc">60 minutos para revisar la tesis del fondo, su rol específico como advisor y la propuesta de participación económica. Sin compromiso previo.</p>
+<!-- PARAMS -->
+<div class="params-bg">
+  <div style="max-width:1280px; margin:0 auto;">
+    <div class="params-grid">
+      <div class="param-item">
+        <div class="param-label">Tamaño Fondo I</div>
+        <div class="param-value">$7.5M USD</div>
       </div>
-      <div class="paso" data-n="2">
-        <div class="paso-n">Paso 02</div>
-        <h3 class="paso-title">Revisión de Materiales</h3>
-        <p class="paso-desc">Acceso al Information Memorandum completo, el Advisory Agreement borrador, el modelo financiero y los documentos legales del fondo.</p>
+      <div class="param-item">
+        <div class="param-label">Ticket por Inversión</div>
+        <div class="param-value">$50K – $500K</div>
       </div>
-      <div class="paso" data-n="3">
-        <div class="paso-n">Paso 03</div>
-        <h3 class="paso-title">Firma del Agreement</h3>
-        <p class="paso-desc">Formalización como miembro fundador del Advisory Board de TMA Ventures con su porcentaje de carried interest asignado y el vesting activo.</p>
+      <div class="param-item">
+        <div class="param-label">Etapa</div>
+        <div class="param-value">Pre-seed a Serie A</div>
+      </div>
+      <div class="param-item">
+        <div class="param-label">Horizonte de Exits</div>
+        <div class="param-value">3 – 5 años</div>
       </div>
     </div>
   </div>
@@ -1256,19 +750,13 @@ footer {
         <em>el ecosistema.</em>
       </h2>
     </div>
-    <div class="cta-right">
-      <p class="cta-body">
-        Venimos a hacer que el agua fluya. Si conoce esta región, si tiene la red, y si cree que el noreste industrial de México está en un punto de inflexión histórico — esta conversación es para usted.
-      </p>
+    <div>
+      <p class="cta-body">Venimos a hacer que el agua fluya. Si conoces esta región por dentro — si has operado en sus corporativos, si entiendes sus problemas reales — esta conversación es para ti.</p>
       <div class="cta-actions">
-        <a href="mailto:jorge@sintelo.com?subject=TMA Ventures — Interés en Advisory Board" class="btn-gold">
-          Agendar Reunión
-        </a>
-        <a href="mailto:jorge@sintelo.com?subject=TMA Ventures — Solicitar Information Memorandum" class="btn-ghost">
-          Solicitar Information Memorandum
-        </a>
+        <a href="mailto:jorge@tmaventures.vc?subject=TMA Ventures — Conversación" class="btn-gold">Iniciar Conversación</a>
+        <a href="mailto:jorge@tmaventures.vc?subject=TMA Ventures — Solicitar Tesis" class="btn-ghost">Solicitar Tesis de Inversión</a>
       </div>
-      <p class="cta-note">Tampico, Tamaulipas · Mayo 2026 · Documento Confidencial</p>
+      <p class="cta-note">Tampico, Tamaulipas · Mayo 2026</p>
     </div>
   </div>
 </div>
@@ -1282,7 +770,7 @@ footer {
     <div class="footer-frase">"Venimos a hacer que el agua fluya."</div>
     <div class="footer-meta">
       Tampico · Ciudad Madero · Altamira
-      <a href="mailto:jorge@sintelo.com">jorge@sintelo.com</a>
+      <a href="mailto:jorge@tmaventures.vc">jorge@tmaventures.vc</a>
       <a href="tel:+15129178247">+1 512 917 8247</a>
     </div>
   </div>
